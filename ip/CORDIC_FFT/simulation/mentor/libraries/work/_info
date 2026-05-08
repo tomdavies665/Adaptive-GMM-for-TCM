@@ -1,0 +1,384 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/FPGA_Projects/GMM/ip/CORDIC_FFT/simulation/mentor
+vCORDIC_FFT
+!s110 1776095186
+!i10b 1
+!s100 ML;1c:a>bg3YmDFZef3Nh2
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IzL7kXCOLJn5=1_EL7F4i83
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1774539571
+8./../CORDIC_FFT.v
+F./../CORDIC_FFT.v
+!i122 63
+L0 6 19
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1776095186.000000
+!s107 ./../CORDIC_FFT.v|
+!s90 -reportprogress|300|./../CORDIC_FFT.v|
+!i113 1
+Z4 tCvgOpt 0
+n@c@o@r@d@i@c_@f@f@t
+vdc_offset
+Z5 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z6 !s110 1775470099
+!i10b 1
+!s100 _b=KBXKjeJP2ZeicUGNnK0
+R1
+IiQ:[M]L6kcS1>oJ8[;63T1
+R2
+S1
+R0
+w1775468098
+8C:/FPGA_Projects/GMM/src/dcOffset.sv
+FC:/FPGA_Projects/GMM/src/dcOffset.sv
+!i122 43
+L0 17 127
+R3
+r1
+!s85 0
+31
+Z7 !s108 1775470099.000000
+!s107 C:/FPGA_Projects/GMM/src/dcOffset.sv|
+!s90 -reportprogress|300|-sv|C:/FPGA_Projects/GMM/src/dcOffset.sv|
+!i113 1
+o-sv
+R4
+vdc_offset_fifo
+R5
+Z8 !s110 1776076579
+!i10b 1
+!s100 o4hJiOMnLPLn`M?^HD3Z41
+R1
+IUj5EiEg?YfBdzbcCd0E0I3
+R2
+S1
+R0
+w1775467196
+8C:/FPGA_Projects/GMM/IP/dc_offset_fifo.v
+FC:/FPGA_Projects/GMM/IP/dc_offset_fifo.v
+!i122 53
+L0 40 58
+R3
+r1
+!s85 0
+31
+Z9 !s108 1776076579.000000
+!s107 C:/FPGA_Projects/GMM/IP/dc_offset_fifo.v|
+!s90 -reportprogress|300|-sv|C:/FPGA_Projects/GMM/IP/dc_offset_fifo.v|
+!i113 1
+o-sv
+R4
+vdc_offset_tb
+R5
+R6
+!i10b 1
+!s100 [?o<2TBI^>@A2d=J[c9ma0
+R1
+IfYEz?2iL6@zI=edK^Rk]G2
+R2
+S1
+R0
+w1775469363
+8C:/FPGA_Projects/GMM/Testbenches/dc_offset_tb.sv
+FC:/FPGA_Projects/GMM/Testbenches/dc_offset_tb.sv
+!i122 44
+L0 3 93
+R3
+r1
+!s85 0
+31
+R7
+!s107 C:/FPGA_Projects/GMM/Testbenches/dc_offset_tb.sv|
+!s90 -reportprogress|300|-sv|C:/FPGA_Projects/GMM/Testbenches/dc_offset_tb.sv|
+!i113 1
+o-sv
+R4
+vdiv32
+Z10 !s110 1776098491
+!i10b 1
+!s100 Hc@JLU?17fo7oZY@NJDYK1
+R1
+I3bl<CnB1HXnk_O[8j9Q671
+R2
+R0
+w1776083697
+8C:/FPGA_Projects/GMM/ip/div32.v
+FC:/FPGA_Projects/GMM/ip/div32.v
+!i122 79
+L0 40 37
+R3
+r1
+!s85 0
+31
+Z11 !s108 1776098491.000000
+!s107 C:/FPGA_Projects/GMM/ip/div32.v|
+!s90 -reportprogress|300|C:/FPGA_Projects/GMM/ip/div32.v|
+!i113 1
+R4
+vfft_mag
+R5
+Z12 !s110 1774540160
+!i10b 1
+!s100 g2@CSz6;8]QnoFPHf?@9Q1
+R1
+IgnBAN2C3^l@^@<MM4hg0S1
+R2
+S1
+R0
+w1774539714
+8C:/FPGA_Projects/GMM/src/fft_mag.sv
+FC:/FPGA_Projects/GMM/src/fft_mag.sv
+!i122 34
+L0 8 47
+R3
+r1
+!s85 0
+31
+Z13 !s108 1774540160.000000
+!s107 C:/FPGA_Projects/GMM/src/fft_mag.sv|
+!s90 -reportprogress|300|-sv|C:/FPGA_Projects/GMM/src/fft_mag.sv|
+!i113 1
+o-sv
+R4
+vfft_mag_tb
+R5
+R12
+!i10b 1
+!s100 VkJ[0B@BCo`7AA=[VEYj[3
+R1
+I=PCcmd^BEK8S_2`M0PKGT2
+R2
+S1
+R0
+w1774540105
+Z14 8C:/FPGA_Projects/GMM/Testbenches/fft_mag_tb.sv
+Z15 FC:/FPGA_Projects/GMM/Testbenches/fft_mag_tb.sv
+!i122 35
+L0 3 108
+R3
+r1
+!s85 0
+31
+R13
+Z16 !s107 C:/FPGA_Projects/GMM/Testbenches/fft_mag_tb.sv|
+Z17 !s90 -reportprogress|300|-sv|C:/FPGA_Projects/GMM/Testbenches/fft_mag_tb.sv|
+!i113 1
+o-sv
+R4
+vGMM_cov
+R5
+R8
+!i10b 1
+!s100 XAi?LjJbh4LSIbjjNe^ZY3
+R1
+I3T4]6bO5Sz]nUiTKbXH1R3
+R2
+S1
+R0
+w1776076240
+8C:/FPGA_Projects/GMM/src/GMM_cov.sv
+FC:/FPGA_Projects/GMM/src/GMM_cov.sv
+!i122 51
+L0 7 148
+R3
+r1
+!s85 0
+31
+R9
+!s107 C:/FPGA_Projects/GMM/src/GMM_cov.sv|
+!s90 -reportprogress|300|-sv|C:/FPGA_Projects/GMM/src/GMM_cov.sv|
+!i113 1
+o-sv
+R4
+n@g@m@m_cov
+vMahalanobis_Distance
+R5
+Z18 !s110 1776158768
+!i10b 1
+!s100 YM2k=<m>2CE7j^`Szck5=3
+R1
+I3TX^4`4M>UPJc]0jeh_U[3
+R2
+S1
+R0
+w1776157946
+8C:/FPGA_Projects/GMM/src/Mahalanobis_Distance.sv
+FC:/FPGA_Projects/GMM/src/Mahalanobis_Distance.sv
+!i122 82
+L0 4 114
+R3
+r1
+!s85 0
+31
+Z19 !s108 1776158768.000000
+!s107 C:/FPGA_Projects/GMM/src/Mahalanobis_Distance.sv|
+!s90 -reportprogress|300|-sv|C:/FPGA_Projects/GMM/src/Mahalanobis_Distance.sv|
+!i113 1
+o-sv
+R4
+n@mahalanobis_@distance
+vMatrix_Inversion
+R5
+R10
+!i10b 1
+!s100 YIU<5`n6h4nz_X[HAAZ8Y2
+R1
+I2=cK`l>PDodhNUC:W0J<>2
+R2
+S1
+R0
+w1776098074
+8C:/FPGA_Projects/GMM/src/Matrix_Inversion.sv
+FC:/FPGA_Projects/GMM/src/Matrix_Inversion.sv
+!i122 80
+L0 6 192
+R3
+r1
+!s85 0
+31
+R11
+!s107 C:/FPGA_Projects/GMM/src/Matrix_Inversion.sv|
+!s90 -reportprogress|300|-sv|C:/FPGA_Projects/GMM/src/Matrix_Inversion.sv|
+!i113 1
+o-sv
+R4
+n@matrix_@inversion
+vmult32
+R10
+!i10b 1
+!s100 ;;N:df3N[<cFK^<D5ik8?0
+R1
+IaWE`9AU5cKP6mD>:cPoGg3
+R2
+R0
+w1776083540
+8C:/FPGA_Projects/GMM/ip/mult32.v
+FC:/FPGA_Projects/GMM/ip/mult32.v
+!i122 78
+L0 40 34
+R3
+r1
+!s85 0
+31
+R11
+!s107 C:/FPGA_Projects/GMM/ip/mult32.v|
+!s90 -reportprogress|300|C:/FPGA_Projects/GMM/ip/mult32.v|
+!i113 1
+R4
+vtb_fft_mag
+R5
+!s110 1774454192
+!i10b 1
+!s100 4V?HgkBg@CiY93D0cIjLL0
+R1
+IM^<[CBnF6_Tf7Ab2KL9=T2
+R2
+S1
+R0
+w1774453694
+R14
+R15
+!i122 6
+L0 3 96
+R3
+r1
+!s85 0
+31
+!s108 1774454192.000000
+R16
+R17
+!i113 1
+o-sv
+R4
+vtb_GMM_cov
+R5
+R8
+!i10b 1
+!s100 PReHRNAaXYi>_J1cFC2Sc0
+R1
+II^6UR=DDeWVI5G:@mdanQ0
+R2
+S1
+R0
+w1775828747
+8C:/FPGA_Projects/GMM/Testbenches/gmm_cov_tb.sv
+FC:/FPGA_Projects/GMM/Testbenches/gmm_cov_tb.sv
+!i122 52
+L0 3 133
+R3
+r1
+!s85 0
+31
+R9
+!s107 C:/FPGA_Projects/GMM/Testbenches/gmm_cov_tb.sv|
+!s90 -reportprogress|300|-sv|C:/FPGA_Projects/GMM/Testbenches/gmm_cov_tb.sv|
+!i113 1
+o-sv
+R4
+ntb_@g@m@m_cov
+vtb_Mahalanobis_Distance
+R5
+R18
+!i10b 1
+!s100 S;Z?:jO<=P>>P[e[ZiKo12
+R1
+IMChQJ3eb:bGNdjZi>egg`3
+R2
+S1
+R0
+w1776158598
+8C:/FPGA_Projects/GMM/Testbenches/tb_Mahalanobis_Distance.sv
+FC:/FPGA_Projects/GMM/Testbenches/tb_Mahalanobis_Distance.sv
+!i122 83
+L0 3 124
+R3
+r1
+!s85 0
+31
+R19
+!s107 C:/FPGA_Projects/GMM/Testbenches/tb_Mahalanobis_Distance.sv|
+!s90 -reportprogress|300|-sv|C:/FPGA_Projects/GMM/Testbenches/tb_Mahalanobis_Distance.sv|
+!i113 1
+o-sv
+R4
+ntb_@mahalanobis_@distance
+vtb_Matrix_Inversion
+R5
+R10
+!i10b 1
+!s100 m[KheZ>J0@C58^0UcY2Gf1
+R1
+I1LPJ][SVVbO=>V7zF_^R[1
+R2
+S1
+R0
+w1776098424
+8C:/FPGA_Projects/GMM/Testbenches/Matrix_Inversion_tb.sv
+FC:/FPGA_Projects/GMM/Testbenches/Matrix_Inversion_tb.sv
+!i122 81
+L0 3 89
+R3
+r1
+!s85 0
+31
+R11
+!s107 C:/FPGA_Projects/GMM/Testbenches/Matrix_Inversion_tb.sv|
+!s90 -reportprogress|300|-sv|C:/FPGA_Projects/GMM/Testbenches/Matrix_Inversion_tb.sv|
+!i113 1
+o-sv
+R4
+ntb_@matrix_@inversion

@@ -1,0 +1,4 @@
+set_global_assignment -name QIP_FILE [file join $::quartus(qip_path) CORDIC_FFT/CORDIC_FFT.qip]
+set_global_assignment -name QIP_FILE [file join $::quartus(qip_path) fft/fft.qip]
+set_global_assignment -name QIP_FILE [file join $::quartus(qip_path) cordic/cordic.qip]
+set_global_assignment -name QIP_FILE [file join $::quartus(qip_path) adc/adc.qip]

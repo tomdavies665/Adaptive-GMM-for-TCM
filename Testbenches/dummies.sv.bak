@@ -1,0 +1,14 @@
+// dummies.sv
+module pll (input areset, input inclk0, output c0, output locked); 
+    assign c0 = inclk0; // Just pass clock through
+    assign locked = 1'b0; // We will 'force' this in TB
+endmodule
+
+module adc (
+    input clk_clk, input reset_reset_n, input modular_adc_0_adc_pll_locked_export,
+    input modular_adc_0_adc_pll_clock_clk, input modular_adc_0_sequencer_csr_write,
+    input [31:0] modular_adc_0_sequencer_csr_writedata,
+    output modular_adc_0_response_valid, output [11:0] modular_adc_0_response_data
+);
+    // Leave empty, TB will force the outputs
+endmodule

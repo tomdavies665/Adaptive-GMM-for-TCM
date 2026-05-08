@@ -1,0 +1,17 @@
+// THis file is used to calculate the mean for each feature in the learning process
+// It should accumulate 64 samples, each 54 bits, containing the bits for 3 features
+// Extract the features from the bits, then compute the average by bit shifting 6 bits
+
+module GMM_MEAN
+#(
+	PARAMETER NUM_SAMPLES = 64,
+	PARAMETER DATA_WIDTH  = 51
+)
+(
+	input logic                            clk50,      // Main system clock
+   input logic                            rst_n,      // Global reset
+	
+	// INPUTS
+	input logic [DATA_WIDTH-1:0]				DIN
+
+);

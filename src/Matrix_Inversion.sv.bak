@@ -1,0 +1,4 @@
+// 3x3 Matrix Inversion
+// This accepts the packed array containing the covariance matrix
+// It does pipelined multiplication, 32x32 bit, dropping bottom four bits
+// Outputs 64 bit answer which is truncated to the top 32 bits.

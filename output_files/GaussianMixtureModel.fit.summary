@@ -1,0 +1,18 @@
+Fitter Status : Successful - Tue May  5 11:44:50 2026
+Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Revision Name : GaussianMixtureModel
+Top-level Entity Name : GaussianMixtureModel
+Family : MAX 10
+Device : 10M50SAE144C8G
+Timing Models : Final
+Total logic elements : 20,545 / 49,760 ( 41 % )
+    Total combinational functions : 18,673 / 49,760 ( 38 % )
+    Dedicated logic registers : 10,912 / 49,760 ( 22 % )
+Total registers : 10912
+Total pins : 9 / 101 ( 9 % )
+Total virtual pins : 0
+Total memory bits : 116,836 / 1,677,312 ( 7 % )
+Embedded Multiplier 9-bit elements : 206 / 288 ( 72 % )
+Total PLLs : 1 / 1 ( 100 % )
+UFM blocks : 0 / 1 ( 0 % )
+ADC blocks : 1 / 1 ( 100 % )

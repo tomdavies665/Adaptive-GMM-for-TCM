@@ -1,0 +1,124 @@
+// Author: Tom Davies
+// This file handles the analogue front end.
+// The PLL creates a 10 MHz clock needed for the adc
+// The ADC uses Channel 1, samples at 1 MSPS, 
+// A basic state machine is used to control the adc with Avalon sequencer
+// The decimator means that only 1 out 400 samples are kept to match the sampling rate of the data
+// Data sampled at 2.5 kHz, there 400:1 ratio
+
+
+module analogue_front_end #(
+    parameter DECIMATION_RATIO = 400 // 1 MSPS / 2.5 kHz = 400
+) (
+    input  logic        clk50,      // Main system clock
+    input  logic        rst_n,      // Global reset
+    input  logic        start_acq,  // Trigger to start ADC sampling
+    output logic [11:0] sample_out, // 12-bit filtered/decimated data
+    output logic        sample_vld  // Strobe: High for 1 clock when data is ready for GMM
+);
+	 // --- ADC Register Map  ---
+    localparam ADC_CSR_ADDR   = 1'b0;          // Control and Status Register
+    localparam ADC_START_CMD  = 32'h0000_0001; // Bit 0 starts the sequence
+	 
+	 // Internal signals
+    logic        pll_clk10;
+    logic        pll_locked;
+    logic [11:0] raw_adc_data;
+    logic        raw_adc_valid;
+    logic        adc_write_pulse;
+	 
+	 // --- PLL Instantiation ---
+    // Converts 50MHz to the 10MHz required by the MAX 10 ADC IP
+    pll pll_10 (
+        .areset (!rst_n),
+        .inclk0 (clk50),
+        .c0     (pll_clk10),
+        .locked (pll_locked)
+    );
+	 
+	 // --- ADC Instantiation (Altera Modular ADC) ---
+    adc adc_0 (
+        .clk_clk                              (clk50),
+        .reset_reset_n                        (pll_locked),
+        .modular_adc_0_adc_pll_locked_export  (pll_locked),
+        .modular_adc_0_adc_pll_clock_clk      (pll_clk10),
+        
+        // Avalon Sequencer Control (Starts the ADC)
+        .modular_adc_0_sequencer_csr_address  (ADC_CSR_ADDR),
+        .modular_adc_0_sequencer_csr_read     (1'b0),
+        .modular_adc_0_sequencer_csr_write    (ADC_START_CMD),
+        .modular_adc_0_sequencer_csr_writedata(32'h00000001), // Start command
+        
+        // Avalon Streaming Response (Data coming out)
+        .modular_adc_0_response_valid         (raw_adc_valid),
+        .modular_adc_0_response_data          (raw_adc_data),
+        .modular_adc_0_response_channel       (),
+        .modular_adc_0_response_startofpacket (),
+        .modular_adc_0_response_endofpacket   ()
+    );
+	 
+	 // --- ADC Control State Machine ---
+    typedef enum logic [1:0] {IDLE, START, WAIT} state_t;
+    state_t state;
+
+    always_ff @(posedge clk50 or negedge pll_locked) begin
+        if (!pll_locked) begin
+            state <= IDLE;
+            adc_write_pulse <= 1'b0;
+        end else begin
+            case (state)
+                IDLE: begin
+                    if (start_acq) begin
+                        state <= START;
+                        adc_write_pulse <= 1'b1; // Trigger first conversion
+                    end
+                end
+
+                START: begin
+                    adc_write_pulse <= 1'b0; // Clear pulse after 1 clock
+                    state <= WAIT;
+                end
+
+                WAIT: begin
+                    if (raw_adc_valid) begin
+                        if (start_acq) begin
+                            // LOOP BACK: Re-trigger immediately
+                            state <= START;
+                            adc_write_pulse <= 1'b1;
+                        end else begin
+                            // STOP: User de-asserted start_acq
+                            state <= IDLE;
+                        end
+                    end
+                end
+
+                default: state <= IDLE;
+            endcase
+        end
+    end
+	 
+	 // --- Decimator ---
+    // This logic reduces 1 MSPS -> 2.5 kHz
+    int count;
+    always_ff @(posedge clk50 or negedge rst_n) begin
+        if (!rst_n) begin
+            count      <= 0;
+            sample_vld <= 1'b0;
+            sample_out <= 12'h0;
+        end else if (raw_adc_valid) begin
+            if (count >= (DECIMATION_RATIO - 1)) begin
+                count      <= 0;
+                sample_out <= raw_adc_data; // Capture the 400th sample
+                sample_vld <= 1'b1;         // Trigger GMM
+            end else begin
+                count      <= count + 1;
+                sample_vld <= 1'b0;
+            end
+        end else begin
+            sample_vld <= 1'b0; // Ensure strobe is only 1 clock cycle
+        end
+    end
+
+endmodule
+	 
+	 

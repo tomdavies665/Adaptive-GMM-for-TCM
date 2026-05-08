@@ -1,0 +1,144 @@
+# Compile of dummies.sv was successful.
+# Compile of adcScaler_tb.sv was successful.
+# Compile of adcScale.sv was successful.
+# Compile of analogueFrontEnd_tb.sv was successful.
+# Compile of AnalogueFrontEnd.sv was successful.
+# Compile of analogueFE_LD_tb.sv was successful.
+# Compile of cordic.v was successful.
+# Compile of dspba_library_package.vhd was successful.
+# Compile of fft_tb.sv was successful.
+# Compile of fft.sv failed with 1 errors.
+# 10 compiles, 1 failed with 1 error.
+# Error opening C:/FPGA_Projects/GMM/(vlog-13069) C:/FPGA_Projects/GMM/src/fft.sv
+# Path name 'C:/FPGA_Projects/GMM/(vlog-13069) C:/FPGA_Projects/GMM/src/fft.sv' doesn't exist.
+# Compile of dummies.sv was successful.
+# Compile of adcScaler_tb.sv was successful.
+# Compile of adcScale.sv was successful.
+# Compile of analogueFrontEnd_tb.sv was successful.
+# Compile of AnalogueFrontEnd.sv was successful.
+# Compile of analogueFE_LD_tb.sv was successful.
+# Compile of cordic.v was successful.
+# Compile of dspba_library_package.vhd was successful.
+# Compile of fft_tb.sv was successful.
+# Compile of fft.sv was successful.
+# 10 compiles, 0 failed with no errors.
+vsim work.fft_tb
+# vsim work.fft_tb 
+# Start time: 13:38:04 on Mar 24,2026
+# Loading sv_std.std
+# Loading work.fft_tb
+# ** Error: (vsim-3033) Instantiation of 'fft_wrapper' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /fft_tb File: C:/FPGA_Projects/GMM/Testbenches/fft_tb.sv Line: 32
+#         Searched libraries:
+#             C:/FPGA_Projects/GMM/libraries/work
+# Error loading design
+# End time: 13:38:04 on Mar 24,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 5
+# Compile of dummies.sv was successful.
+# Compile of adcScaler_tb.sv was successful.
+# Compile of adcScale.sv was successful.
+# Compile of analogueFrontEnd_tb.sv was successful.
+# Compile of AnalogueFrontEnd.sv was successful.
+# Compile of analogueFE_LD_tb.sv was successful.
+# Compile of cordic.v was successful.
+# Compile of dspba_library_package.vhd was successful.
+# Compile of fft_tb.sv was successful.
+# Compile of fft.sv was successful.
+# 10 compiles, 0 failed with no errors.
+vsim work.fft_tb
+# vsim work.fft_tb 
+# Start time: 13:38:35 on Mar 24,2026
+# Loading sv_std.std
+# Loading work.fft_tb
+# Loading work.fft
+# ** Warning: (vsim-3035) Instantiation depth of '/fft_tb/dut/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1' is 51. This might indicate a recursive instantiation. Increasing limit to 75.
+# ** Error: (vsim-3036) Instantiation depth of '/fft_tb/dut/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1' is 75. Assuming recursive instantiation.
+#    Time: 0 ps  Iteration: 0  Instance: /fft_tb/dut/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1 File: C:/FPGA_Projects/GMM/src/fft.sv
+# Error loading design
+# End time: 13:38:35 on Mar 24,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 3
+# Compile of dummies.sv was successful.
+# Compile of adcScaler_tb.sv was successful.
+# Compile of adcScale.sv was successful.
+# Compile of analogueFrontEnd_tb.sv was successful.
+# Compile of AnalogueFrontEnd.sv was successful.
+# Compile of analogueFE_LD_tb.sv was successful.
+# Compile of cordic.v was successful.
+# Compile of dspba_library_package.vhd was successful.
+# Compile of fft_tb.sv was successful.
+# Compile of fft.sv was successful.
+# 10 compiles, 0 failed with no errors.
+vsim work.fft_tb
+# vsim work.fft_tb 
+# Start time: 13:41:09 on Mar 24,2026
+# Loading sv_std.std
+# Loading work.fft_tb
+# Loading work.fft_wrapper
+# Loading work.fft
+# ** Warning: (vsim-3035) Instantiation depth of '/fft_tb/dut/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1' is 51. This might indicate a recursive instantiation. Increasing limit to 75.
+# ** Error: (vsim-3036) Instantiation depth of '/fft_tb/dut/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1' is 75. Assuming recursive instantiation.
+#    Time: 0 ps  Iteration: 0  Instance: /fft_tb/dut/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1 File: C:/FPGA_Projects/GMM/src/fft.sv
+# Error loading design
+# End time: 13:41:09 on Mar 24,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 3
+# Compile of dummies.sv was successful.
+# Compile of adcScaler_tb.sv was successful.
+# Compile of adcScale.sv was successful.
+# Compile of analogueFrontEnd_tb.sv was successful.
+# Compile of AnalogueFrontEnd.sv was successful.
+# Compile of analogueFE_LD_tb.sv was successful.
+# Compile of cordic.v was successful.
+# Compile of dspba_library_package.vhd was successful.
+# Compile of fft_tb.sv was successful.
+# Compile of fft_wrapper.sv was successful.
+# 10 compiles, 0 failed with no errors.
+vsim work.fft_tb
+# vsim work.fft_tb 
+# Start time: 13:43:44 on Mar 24,2026
+# Loading sv_std.std
+# Loading work.fft_tb
+# Loading work.fft_wrapper
+# Loading work.fft
+# ** Warning: (vsim-3035) Instantiation depth of '/fft_tb/dut/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1' is 51. This might indicate a recursive instantiation. Increasing limit to 75.
+# ** Error: (vsim-3036) Instantiation depth of '/fft_tb/dut/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1' is 75. Assuming recursive instantiation.
+#    Time: 0 ps  Iteration: 0  Instance: /fft_tb/dut/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1/fft_1 File: C:/FPGA_Projects/GMM/src/fft.sv
+# Error loading design
+# End time: 13:43:44 on Mar 24,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 5
+vsim work.fft_wrapper
+# vsim work.fft_wrapper 
+# Start time: 13:44:00 on Mar 24,2026
+# Loading sv_std.std
+# Loading work.fft_wrapper
+# ** Error: (vsim-3033) Instantiation of 'fft' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /fft_wrapper File: C:/FPGA_Projects/GMM/src/fft_wrapper.sv Line: 50
+#         Searched libraries:
+#             C:/FPGA_Projects/GMM/libraries/work
+# Error loading design
+# End time: 13:44:00 on Mar 24,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 1
+vsim work.fft_tb
+# vsim work.fft_tb 
+# Start time: 13:44:03 on Mar 24,2026
+# Loading sv_std.std
+# Loading work.fft_tb
+# Loading work.fft_wrapper
+# ** Error: (vsim-3033) Instantiation of 'fft' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /fft_tb/dut File: C:/FPGA_Projects/GMM/src/fft_wrapper.sv Line: 50
+#         Searched libraries:
+#             C:/FPGA_Projects/GMM/libraries/work
+# Error loading design
+# End time: 13:44:03 on Mar 24,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 1
+# Compile of dummies.sv was successful.
+# Compile of adcScaler_tb.sv was successful.
+# Compile of adcScale.sv was successful.
+# Compile of analogueFrontEnd_tb.sv was successful.
+# Compile of AnalogueFrontEnd.sv was successful.
+# Compile of analogueFE_LD_tb.sv was successful.
+# Compile of cordic.v was successful.
+# Compile of dspba_library_package.vhd was successful.
+# Compile of fft_tb.sv was successful.
+# Compile of fft_wrapper.sv was successful.
+# 10 compiles, 0 failed with no errors.
+cd C:/FPGA_Projects/GMM/ip/fft_sim/mentor/

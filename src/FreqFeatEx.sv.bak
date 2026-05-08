@@ -1,0 +1,12 @@
+// This extracts the frequency domain features
+// 
+// Fundamental Harmonic Magnitude:
+// This finds the fundamental harmonic, the largest peak which is equal to the spindle speed
+//
+// High Frequency Content Mean:
+// Takes the mean of all frequency bins 20x the fundamental harmonic bin.
+// This makes it adaptable to different spindle speeds rather than hardcoding it.
+
+
+module freq_Feat_Ex
+

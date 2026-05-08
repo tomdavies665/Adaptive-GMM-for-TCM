@@ -1,0 +1,152 @@
+// GMM Covariance Matrix
+// This accepts data being read to it from the RAM
+// Accumulatest eh covariance matrix for each sample 
+// Bit shifts by the number of samples
+// Returns the covariance matrix 
+
+module GMM_cov
+#(
+    parameter NUM_SAMPLES = 64,
+    parameter FEAT_W      = 18,  // 18-bit features
+    parameter NUM_FEAT    = 3,   // 3 features
+    
+    // Derived parameters
+    parameter MULT_W = FEAT_W * 2,                         // 36-bit multiplication result
+    parameter ACC_W  = MULT_W + $clog2(NUM_SAMPLES),       // 42-bit accumulator to prevent overflow
+    parameter PACKED_DIN_W  = FEAT_W * NUM_FEAT,           // 54-bit input bus
+    parameter PACKED_COV_W  = MULT_W * 6                   // 6 unique elements, each 36-bit
+)
+(
+    input  logic                      clk50,
+    input  logic                      rst_n,
+    
+    // Control Flags
+    input  logic                      start_cov,   // Pulses high to reset accumulators for a new run
+    input  logic                      din_vld,     // High when valid data is streaming from RAM
+    
+    // Data Inputs
+    input  logic [PACKED_DIN_W-1:0]   din,         // Packed 3x18-bit current sample from RAM
+    input  logic [PACKED_DIN_W-1:0]   mean_in,     // Packed 3x18-bit mean vector (from Pass 1)
+    
+    // Outputs
+    output logic                      cov_vld,     // High when accumulation and division is complete
+    output logic [PACKED_COV_W-1:0]   cov_matrix   // Packed 6x36-bit covariance elements
+);
+
+    localparam SHIFT_AMOUNT = $clog2(NUM_SAMPLES); // Div by 64 = Right shift by 6
+
+    // -------------------------------------------------------------------------
+    // 1. UNPACK INPUTS
+    // -------------------------------------------------------------------------
+    logic signed [FEAT_W-1:0] x   [0:2];
+    logic signed [FEAT_W-1:0] mu  [0:2];
+
+    assign {x[2], x[1], x[0]}    = din;
+    assign {mu[2], mu[1], mu[0]} = mean_in;
+
+    // -------------------------------------------------------------------------
+    // 2. PIPELINE STAGE 1: SUBTRACTION (x - mu)
+    // -------------------------------------------------------------------------
+    logic signed [FEAT_W-1:0] diff [0:2];
+    logic                     diff_vld;
+
+    always_ff @(posedge clk50 or negedge rst_n) begin
+        if (!rst_n) begin
+            diff[0]  <= '0; 
+				diff[1] <= '0; 
+				diff[2] <= '0;
+            diff_vld <= 1'b0;
+        end else begin
+            diff_vld <= din_vld;
+            if (din_vld) begin
+                diff[0] <= x[0] - mu[0];
+                diff[1] <= x[1] - mu[1];
+                diff[2] <= x[2] - mu[2];
+            end
+        end
+    end
+
+    // -------------------------------------------------------------------------
+    // 3. PIPELINE STAGE 2: MULTIPLICATION (Inferred DSP Slices)
+    // -------------------------------------------------------------------------
+    // 6 unique combinations for a 3x3 symmetric matrix:
+    // c00, c01, c02
+    //      c11, c12
+    //           c22
+    logic signed [MULT_W-1:0] prod [0:5];
+    logic                     prod_vld;
+
+    always_ff @(posedge clk50 or negedge rst_n) begin
+        if (!rst_n) begin
+            for (int i=0; i<6; i++) prod[i] <= '0;
+            prod_vld <= 1'b0;
+        end else begin
+            prod_vld <= diff_vld;
+            if (diff_vld) begin
+                prod[0] <= diff[0] * diff[0]; // Cov(0,0) - Variance of Feat 0
+                prod[1] <= diff[0] * diff[1]; // Cov(0,1)
+                prod[2] <= diff[0] * diff[2]; // Cov(0,2)
+                prod[3] <= diff[1] * diff[1]; // Cov(1,1) - Variance of Feat 1
+                prod[4] <= diff[1] * diff[2]; // Cov(1,2)
+                prod[5] <= diff[2] * diff[2]; // Cov(2,2) - Variance of Feat 2
+            end
+        end
+    end
+
+    // -------------------------------------------------------------------------
+    // 4. PIPELINE STAGE 3: ACCUMULATION
+    // -------------------------------------------------------------------------
+    logic signed [ACC_W-1:0] acc [0:5];
+    logic [$clog2(NUM_SAMPLES):0] sample_count;
+
+    always_ff @(posedge clk50 or negedge rst_n) begin
+        if (!rst_n) begin
+            for (int i=0; i<6; i++) acc[i] <= '0;
+            sample_count <= '0;
+            cov_vld <= 1'b0;
+        end else begin
+            // Default pulse
+            cov_vld <= 1'b0;
+
+            if (start_cov) begin
+                for (int i=0; i<6; i++) acc[i] <= '0;
+                sample_count <= '0;
+            end else if (prod_vld) begin
+                for (int i=0; i<6; i++) begin
+                    acc[i] <= acc[i] + prod[i];
+                end
+                
+                sample_count <= sample_count + 1;
+                
+                // Flag done when all 64 samples are accumulated
+                if (sample_count == NUM_SAMPLES - 1) begin
+                    cov_vld <= 1'b1;
+                end
+            end
+        end
+    end
+
+    // -------------------------------------------------------------------------
+    // 5. DIVISION (Bit-shift) & OUTPUT ASSIGNMENT
+    // -------------------------------------------------------------------------
+    // Divide the 42-bit accumulator by 64 (>> 6) to return back to 36-bit format
+    logic signed [MULT_W-1:0] cov_final [0:5];
+
+    always_comb begin
+        for (int i=0; i<6; i++) begin
+            // Arithmetic right shift to preserve the sign bit
+            cov_final[i] = acc[i] >>> SHIFT_AMOUNT; 
+        end
+    end
+
+    // Pack the 6 unique 36-bit elements into the flat output bus
+    assign cov_matrix = {
+        cov_final[5], // Cov(2,2)
+        cov_final[4], // Cov(1,2)
+        cov_final[3], // Cov(1,1)
+        cov_final[2], // Cov(0,2)
+        cov_final[1], // Cov(0,1)
+        cov_final[0]  // Cov(0,0)
+    };
+
+endmodule

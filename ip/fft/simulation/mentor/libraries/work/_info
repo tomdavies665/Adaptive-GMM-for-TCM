@@ -1,0 +1,84 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/FPGA_Projects/GMM/ip/fft/simulation/mentor
+vfft
+!s110 1774607727
+!i10b 1
+!s100 ]Wd:12]=G]7^hiEdd^5>n3
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IJ@_cUeR@n7AaH]aB_>MKZ1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1774536847
+8./../fft.v
+F./../fft.v
+!i122 45
+L0 6 45
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1774607727.000000
+!s107 ./../fft.v|
+!s90 -reportprogress|300|./../fft.v|
+!i113 1
+Z4 tCvgOpt 0
+vfft_tb
+Z5 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z6 !s110 1774607728
+!i10b 1
+!s100 ^gNlYiAD_MoammTZhQc:@0
+R1
+I5A5aC>o`azeRWoN=^Q[XQ2
+R2
+S1
+R0
+w1774538872
+8C:/FPGA_Projects/GMM/Testbenches/fft_tb.sv
+FC:/FPGA_Projects/GMM/Testbenches/fft_tb.sv
+!i122 47
+L0 3 115
+R3
+r1
+!s85 0
+31
+Z7 !s108 1774607728.000000
+!s107 C:/FPGA_Projects/GMM/Testbenches/fft_tb.sv|
+!s90 -reportprogress|300|-sv|C:/FPGA_Projects/GMM/Testbenches/fft_tb.sv|
+!i113 1
+o-sv
+R4
+vfft_wrapper
+R5
+R6
+!i10b 1
+!s100 97Qh_`lHDYo4dYT3`i4kO2
+R1
+I=bQ5>F05RAi84M;7YlcbB0
+R2
+S1
+R0
+w1774537209
+8C:/FPGA_Projects/GMM/src/fft_wrapper.sv
+FC:/FPGA_Projects/GMM/src/fft_wrapper.sv
+!i122 46
+L0 12 86
+R3
+r1
+!s85 0
+31
+R7
+!s107 C:/FPGA_Projects/GMM/src/fft_wrapper.sv|
+!s90 -reportprogress|300|-sv|C:/FPGA_Projects/GMM/src/fft_wrapper.sv|
+!i113 1
+o-sv
+R4

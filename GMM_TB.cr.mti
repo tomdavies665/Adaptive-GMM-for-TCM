@@ -1,0 +1,73 @@
+C:/FPGA_Projects/GMM/src/fft_wrapper.sv {1 {vlog -work work -sv -stats=none C:/FPGA_Projects/GMM/src/fft_wrapper.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module fft_wrapper
+
+Top level modules:
+	fft_wrapper
+
+} {} {}} C:/FPGA_Projects/GMM/src/AnalogueFrontEnd.sv {1 {vlog -work work -sv -stats=none C:/FPGA_Projects/GMM/src/AnalogueFrontEnd.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module analogue_front_end
+
+Top level modules:
+	analogue_front_end
+
+} {} {}} C:/FPGA_Projects/GMM/ip/cordic/simulation/submodules/dspba_library_package.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/FPGA_Projects/GMM/ip/cordic/simulation/submodules/dspba_library_package.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling package dspba_library_package
+
+} {} {}} C:/FPGA_Projects/GMM/Testbenches/dummies.sv {1 {vlog -work work -sv -stats=none C:/FPGA_Projects/GMM/Testbenches/dummies.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module pll
+-- Compiling module adc
+
+Top level modules:
+	pll
+	adc
+
+} {} {}} C:/FPGA_Projects/GMM/src/adcScale.sv {1 {vlog -work work -sv -stats=none C:/FPGA_Projects/GMM/src/adcScale.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module adcScale
+
+Top level modules:
+	adcScale
+
+} {} {}} C:/FPGA_Projects/GMM/Testbenches/fft_tb.sv {1 {vlog -work work -sv -stats=none C:/FPGA_Projects/GMM/Testbenches/fft_tb.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module fft_wrapper
+
+Top level modules:
+	fft_wrapper
+
+} {} {}} C:/FPGA_Projects/GMM/ip/cordic/simulation/cordic.v {1 {vlog -work work -stats=none C:/FPGA_Projects/GMM/ip/cordic/simulation/cordic.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module cordic
+
+Top level modules:
+	cordic
+
+} {} {}} C:/FPGA_Projects/GMM/Testbenches/analogueFrontEnd_tb.sv {1 {vlog -work work -sv -stats=none C:/FPGA_Projects/GMM/Testbenches/analogueFrontEnd_tb.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module analogueFrontEnd_tb
+
+Top level modules:
+	analogueFrontEnd_tb
+
+} {} {}} C:/FPGA_Projects/GMM/Testbenches/adcScaler_tb.sv {1 {vlog -work work -sv -stats=none C:/FPGA_Projects/GMM/Testbenches/adcScaler_tb.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_adcScale
+
+Top level modules:
+	tb_adcScale
+
+} {} {}} C:/FPGA_Projects/GMM/Testbenches/analogueFE_LD_tb.sv {1 {vlog -work work -sv -stats=none C:/FPGA_Projects/GMM/Testbenches/analogueFE_LD_tb.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_analogue_front_end
+
+Top level modules:
+	tb_analogue_front_end
+
+} {} {}}

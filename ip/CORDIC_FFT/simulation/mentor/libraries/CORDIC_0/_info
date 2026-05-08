@@ -1,0 +1,215 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/FPGA_Projects/GMM/ip/CORDIC_FFT/simulation/mentor
+Ecordic_fft_cordic_0
+Z1 w1774539574
+Z2 DPx3 lpm 14 lpm_components 0 22 MQaJVKl6c9@C2XO9DaM[F2
+Z3 DPx9 altera_mf 20 altera_mf_components 0 22 ^:alB2MJEEXl;OOBQIDHY2
+Z4 DPx4 work 21 dspba_library_package 0 22 7VQiB1eFYi=[YQkCj4N4z1
+Z5 DPx4 ieee 9 math_real 0 22 gNk<PdFJ<XNPcfef`f?Z81
+Z6 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 65
+R0
+Z9 8./../submodules/CORDIC_FFT_CORDIC_0.vhd
+Z10 F./../submodules/CORDIC_FFT_CORDIC_0.vhd
+l0
+L34 1
+V_6IY[@mmUaXYWzb0`[neY1
+!s100 gYe^I@M0Of>0>I>m>43X<3
+Z11 OV;C;2020.1;71
+32
+Z12 !s110 1776095186
+!i10b 1
+Z13 !s108 1776095186.000000
+Z14 !s90 -reportprogress|300|./../submodules/CORDIC_FFT_CORDIC_0.vhd|-work|CORDIC_0|
+Z15 !s107 ./../submodules/CORDIC_FFT_CORDIC_0.vhd|
+!i113 1
+Z16 o-work CORDIC_0
+Z17 tExplicit 1 CvgOpt 0
+Anormal
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+Z18 DEx4 work 19 cordic_fft_cordic_0 0 22 _6IY[@mmUaXYWzb0`[neY1
+!i122 65
+l661
+Z19 L45 2480
+Z20 VP^fE:>R=<NGLiFGzGjH6e1
+Z21 !s100 FRDS[gL8V5e7OS2h;m3G=0
+R11
+32
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 1
+R16
+R17
+Edspba_delay
+R1
+R4
+R7
+R8
+!i122 64
+R0
+Z22 8./../submodules/dspba_library.vhd
+Z23 F./../submodules/dspba_library.vhd
+l0
+L18 1
+VQi>o3lV3:1Pk[bJPW0k:10
+!s100 >TY9@l4a>2O5Wd_6jF4:g0
+R11
+32
+R12
+!i10b 1
+R13
+Z24 !s90 -reportprogress|300|./../submodules/dspba_library.vhd|-work|CORDIC_0|
+Z25 !s107 ./../submodules/dspba_library.vhd|
+!i113 1
+R16
+R17
+Adelay
+R4
+R7
+R8
+DEx4 work 11 dspba_delay 0 22 Qi>o3lV3:1Pk[bJPW0k:10
+!i122 64
+l37
+L34 51
+VdzjW4iH5Qh>4NDD^X2>o81
+!s100 DAfPXKZhR<Ac>Wg8zYj1H3
+R11
+32
+R12
+!i10b 1
+R13
+R24
+R25
+!i113 1
+R16
+R17
+Pdspba_library_package
+R7
+R8
+!i122 63
+R1
+R0
+8./../submodules/dspba_library_package.vhd
+F./../submodules/dspba_library_package.vhd
+l0
+L17 1
+V7VQiB1eFYi=[YQkCj4N4z1
+!s100 @e;XE0e^oAdIdzY=Rc];H3
+R11
+32
+R12
+!i10b 1
+R13
+!s90 -reportprogress|300|./../submodules/dspba_library_package.vhd|-work|CORDIC_0|
+!s107 ./../submodules/dspba_library_package.vhd|
+!i113 1
+R16
+R17
+Edspba_pipe
+R1
+R6
+R7
+R8
+!i122 64
+R0
+R22
+R23
+l0
+L343 1
+VX4[HngcA467l8iJzSXQ_G3
+!s100 ko3XcgZgdPgSD;SDR?Wmi2
+R11
+32
+R12
+!i10b 1
+R13
+R24
+R25
+!i113 1
+R16
+R17
+Artl
+R6
+R7
+R8
+DEx4 work 10 dspba_pipe 0 22 X4[HngcA467l8iJzSXQ_G3
+!i122 64
+l362
+L356 21
+Vo28EdO37[6k5?<93;98V[2
+!s100 =]hA3YBJaaU9dNBMla?I?2
+R11
+32
+R12
+!i10b 1
+R13
+R24
+R25
+!i113 1
+R16
+R17
+Edspba_sync_reg
+R1
+R4
+R6
+R7
+R8
+!i122 64
+R0
+R22
+R23
+l0
+L93 1
+V4FL]^S[j4XM2?2c2[mR[W2
+!s100 G`[2Ci2RQWoL`zK>2h>oj2
+R11
+32
+R12
+!i10b 1
+R13
+R24
+R25
+!i113 1
+R16
+R17
+Async_reg
+R4
+R6
+R7
+R8
+DEx4 work 14 dspba_sync_reg 0 22 4FL]^S[j4XM2?2c2[mR[W2
+!i122 64
+l136
+L117 219
+Vheio`gBQ9alOgHaARDA0Y1
+!s100 3CF6gEiK7^`H_<3Ne[inV2
+R11
+32
+R12
+!i10b 1
+R13
+R24
+R25
+!i113 1
+R16
+R17

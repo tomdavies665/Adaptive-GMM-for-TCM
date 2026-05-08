@@ -1,0 +1,417 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/FPGA_Projects/GMM
+vadc
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1774275537
+!i10b 1
+!s100 7H14c28DHGEM5M2KPH4C_0
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I]Ki`oFn<U;O@ObNVKnIke1
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+Z5 w1773075474
+Z6 8C:/FPGA_Projects/GMM/Testbenches/dummies.sv
+Z7 FC:/FPGA_Projects/GMM/Testbenches/dummies.sv
+!i122 162
+L0 13 23
+Z8 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z9 !s108 1774275537.000000
+Z10 !s107 C:/FPGA_Projects/GMM/Testbenches/dummies.sv|
+Z11 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/FPGA_Projects/GMM/Testbenches/dummies.sv|
+!i113 1
+Z12 o-work work -sv
+Z13 tCvgOpt 0
+vadcScale
+R1
+Z14 !s110 1774275538
+!i10b 1
+!s100 S[XIQFn7GWTo^T7igd>ni2
+R3
+I1]kB5DniFg95^`jac=l]X3
+R4
+S1
+R0
+w1774188370
+8C:/FPGA_Projects/GMM/src/adcScale.sv
+FC:/FPGA_Projects/GMM/src/adcScale.sv
+!i122 164
+L0 7 40
+R8
+r1
+!s85 0
+31
+Z15 !s108 1774275538.000000
+!s107 C:/FPGA_Projects/GMM/src/adcScale.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/FPGA_Projects/GMM/src/adcScale.sv|
+!i113 1
+R12
+R13
+nadc@scale
+vanalogue_front_end
+R1
+R14
+!i10b 1
+!s100 8e3_fOzGWfj@R]42C9=:52
+R3
+I?ci_kgbn4>]48366d;z1<3
+R4
+S1
+R0
+w1774275497
+8C:/FPGA_Projects/GMM/src/AnalogueFrontEnd.sv
+FC:/FPGA_Projects/GMM/src/AnalogueFrontEnd.sv
+!i122 166
+L0 10 221
+R8
+r1
+!s85 0
+31
+R15
+!s107 C:/FPGA_Projects/GMM/src/AnalogueFrontEnd.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/FPGA_Projects/GMM/src/AnalogueFrontEnd.sv|
+!i113 1
+R12
+R13
+vanalogueFrontEnd_tb
+R1
+R14
+!i10b 1
+!s100 TW_1INcP0TN8cBJ5OTJ5a1
+R3
+I7_@TdAJjeW1;?<nmT7WkP3
+R4
+S1
+R0
+w1774101066
+8C:/FPGA_Projects/GMM/Testbenches/analogueFrontEnd_tb.sv
+FC:/FPGA_Projects/GMM/Testbenches/analogueFrontEnd_tb.sv
+!i122 165
+L0 3 121
+R8
+r1
+!s85 0
+31
+R15
+!s107 C:/FPGA_Projects/GMM/Testbenches/analogueFrontEnd_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/FPGA_Projects/GMM/Testbenches/analogueFrontEnd_tb.sv|
+!i113 1
+R12
+R13
+nanalogue@front@end_tb
+vcordic
+R14
+!i10b 1
+!s100 3Me9:4XD;aQcjd:_PX`^I2
+R3
+I0Va;SbBDLY2YH4_[Ojid_1
+R4
+R0
+w1774273614
+8C:/FPGA_Projects/GMM/ip/cordic/simulation/cordic.v
+FC:/FPGA_Projects/GMM/ip/cordic/simulation/cordic.v
+!i122 168
+L0 6 21
+R8
+r1
+!s85 0
+31
+R15
+!s107 C:/FPGA_Projects/GMM/ip/cordic/simulation/cordic.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/FPGA_Projects/GMM/ip/cordic/simulation/cordic.v|
+!i113 1
+o-work work
+R13
+Ecordic_cordic_0
+Z16 DPx3 lpm 14 lpm_components 0 22 ZZ?0`GZD@?:kcFM0gmf[@1
+Z17 DPx9 altera_mf 20 altera_mf_components 0 22 BN6nPmY:UEbXa[^5b@FTW1
+Z18 DPx4 work 21 dspba_library_package 0 22 g5ge0<PbUA3NecLg[8;Cj3
+Z19 DPx4 ieee 9 math_real 0 22 gNk<PdFJ<XNPcfef`f?Z81
+Z20 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z21 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z22 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+32
+Z23 !s110 1774265391
+!i10b 1
+Z24 w1774190323
+!i122 95
+R0
+Z25 8C:/FPGA_Projects/GMM/ip/cordic/simulation/submodules/cordic_CORDIC_0.vhd
+Z26 FC:/FPGA_Projects/GMM/ip/cordic/simulation/submodules/cordic_CORDIC_0.vhd
+l0
+L34 1
+VF0ilI6gJIohKD9`P`[a`12
+!s100 AWcmifGX2i_K5a?ciWdlb1
+Z27 OV;C;2020.1;71
+Z28 !s108 1774265391.000000
+Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/FPGA_Projects/GMM/ip/cordic/simulation/submodules/cordic_CORDIC_0.vhd|
+Z30 !s107 C:/FPGA_Projects/GMM/ip/cordic/simulation/submodules/cordic_CORDIC_0.vhd|
+!i113 1
+Z31 o-work work -2002 -explicit
+Z32 tExplicit 1 CvgOpt 0
+Anormal
+R16
+R17
+R18
+R19
+R20
+R21
+R22
+DEx4 work 15 cordic_cordic_0 0 22 F0ilI6gJIohKD9`P`[a`12
+32
+R23
+!i10b 1
+!i122 95
+l342
+L46 1244
+VZbB@bL:3fUI_2HS]lb;8Y1
+!s100 h^o?J09D8UWcJX]LO<:Q]2
+R27
+R28
+R29
+R30
+!i113 1
+R31
+R32
+Edspba_delay
+R18
+R21
+R22
+32
+Z33 !s110 1774265385
+!i10b 1
+R24
+!i122 94
+R0
+Z34 8C:/FPGA_Projects/GMM/ip/cordic/simulation/submodules/dspba_library.vhd
+Z35 FC:/FPGA_Projects/GMM/ip/cordic/simulation/submodules/dspba_library.vhd
+l0
+L18 1
+VJZ>XXZi]3nAML><T1OJmD2
+!s100 >TY9@l4a>2O5Wd_6jF4:g0
+R27
+Z36 !s108 1774265385.000000
+Z37 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/FPGA_Projects/GMM/ip/cordic/simulation/submodules/dspba_library.vhd|
+Z38 !s107 C:/FPGA_Projects/GMM/ip/cordic/simulation/submodules/dspba_library.vhd|
+!i113 1
+R31
+R32
+Adelay
+R18
+R21
+R22
+DEx4 work 11 dspba_delay 0 22 JZ>XXZi]3nAML><T1OJmD2
+32
+R33
+!i10b 1
+!i122 94
+l37
+L34 51
+VH[ibU<H]FT4<DCgHmIjFa0
+!s100 DAfPXKZhR<Ac>Wg8zYj1H3
+R27
+R36
+R37
+R38
+!i113 1
+R31
+R32
+Pdspba_library_package
+R21
+R22
+!i122 169
+w1774273616
+R0
+8C:/FPGA_Projects/GMM/ip/cordic/simulation/submodules/dspba_library_package.vhd
+FC:/FPGA_Projects/GMM/ip/cordic/simulation/submodules/dspba_library_package.vhd
+l0
+L17 1
+Vg5ge0<PbUA3NecLg[8;Cj3
+!s100 @e;XE0e^oAdIdzY=Rc];H3
+R27
+32
+R14
+!i10b 1
+R15
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/FPGA_Projects/GMM/ip/cordic/simulation/submodules/dspba_library_package.vhd|
+!s107 C:/FPGA_Projects/GMM/ip/cordic/simulation/submodules/dspba_library_package.vhd|
+!i113 1
+R31
+R32
+Edspba_pipe
+R20
+R21
+R22
+32
+R33
+!i10b 1
+R24
+!i122 94
+R0
+R34
+R35
+l0
+L343 1
+VhX_ehDHUhEGT`<4CLHDEW1
+!s100 ko3XcgZgdPgSD;SDR?Wmi2
+R27
+R36
+R37
+R38
+!i113 1
+R31
+R32
+Artl
+R20
+R21
+R22
+DEx4 work 10 dspba_pipe 0 22 hX_ehDHUhEGT`<4CLHDEW1
+32
+R33
+!i10b 1
+!i122 94
+l362
+L356 21
+VF>oh8b`LjePmYI9jU_S=k2
+!s100 =]hA3YBJaaU9dNBMla?I?2
+R27
+R36
+R37
+R38
+!i113 1
+R31
+R32
+Edspba_sync_reg
+R18
+R20
+R21
+R22
+32
+R33
+!i10b 1
+R24
+!i122 94
+R0
+R34
+R35
+l0
+L93 1
+V[2:MQ1fH@k]9VCDY^FzcN0
+!s100 G`[2Ci2RQWoL`zK>2h>oj2
+R27
+R36
+R37
+R38
+!i113 1
+R31
+R32
+Async_reg
+R18
+R20
+R21
+R22
+DEx4 work 14 dspba_sync_reg 0 22 [2:MQ1fH@k]9VCDY^FzcN0
+32
+R33
+!i10b 1
+!i122 94
+l136
+L117 219
+VZKLBIVGKhdlX>MS;1P6Rc3
+!s100 3CF6gEiK7^`H_<3Ne[inV2
+R27
+R36
+R37
+R38
+!i113 1
+R31
+R32
+vpll
+R1
+R2
+!i10b 1
+!s100 ::1GJVVldhIE6F]5iMM0O0
+R3
+IOTH3DjO__Kz^2UhD<G1Xj2
+R4
+S1
+R0
+R5
+R6
+R7
+!i122 162
+L0 3 9
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vtb_adcScale
+R1
+R2
+!i10b 1
+!s100 69adSCRVH:=J]S?modVZA3
+R3
+I5gUlJ_8f5Uik818XADLUb0
+R4
+S1
+R0
+w1774099148
+8C:/FPGA_Projects/GMM/Testbenches/adcScaler_tb.sv
+FC:/FPGA_Projects/GMM/Testbenches/adcScaler_tb.sv
+!i122 163
+L0 3 70
+R8
+r1
+!s85 0
+31
+R9
+!s107 C:/FPGA_Projects/GMM/Testbenches/adcScaler_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/FPGA_Projects/GMM/Testbenches/adcScaler_tb.sv|
+!i113 1
+R12
+R13
+ntb_adc@scale
+vtb_analogue_front_end
+R1
+R14
+!i10b 1
+!s100 _QW:iHMGd`lXVkYHBnaj70
+R3
+ISU=>@c:GKNTJMV99YaAKY1
+R4
+S1
+R0
+w1774275526
+8C:/FPGA_Projects/GMM/Testbenches/analogueFE_LD_tb.sv
+FC:/FPGA_Projects/GMM/Testbenches/analogueFE_LD_tb.sv
+!i122 167
+L0 3 113
+R8
+r1
+!s85 0
+31
+R15
+!s107 C:/FPGA_Projects/GMM/Testbenches/analogueFE_LD_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/FPGA_Projects/GMM/Testbenches/analogueFE_LD_tb.sv|
+!i113 1
+R12
+R13

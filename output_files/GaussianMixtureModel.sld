@@ -1,0 +1,24 @@
+<sld_project_info>
+  <sld_infos>
+    <sld_info hpath="fft_mag:fft_mag_inst|CORDIC_FFT:fft_mag_1" name="fft_mag_1">
+      <assignment_values>
+        <assignment_value text="QSYS_NAME CORDIC_FFT HAS_SOPCINFO 1 GENERATION_ID 1777977455"/>
+      </assignment_values>
+    </sld_info>
+    <sld_info hpath="analogue_front_end:afe_inst|adc:adc_0" name="adc_0">
+      <assignment_values>
+        <assignment_value text="QSYS_NAME adc HAS_SOPCINFO 1 GENERATION_ID 1777977551"/>
+      </assignment_values>
+    </sld_info>
+    <sld_info hpath="analogue_front_end:afe_inst|cordic:adc_mag" name="adc_mag">
+      <assignment_values>
+        <assignment_value text="QSYS_NAME cordic HAS_SOPCINFO 1 GENERATION_ID 1777977516"/>
+      </assignment_values>
+    </sld_info>
+    <sld_info hpath="fft_wrapper:fft_inst|fft:fft_1" name="fft_1">
+      <assignment_values>
+        <assignment_value text="QSYS_NAME fft HAS_SOPCINFO 1 GENERATION_ID 1777977492"/>
+      </assignment_values>
+    </sld_info>
+  </sld_infos>
+</sld_project_info>

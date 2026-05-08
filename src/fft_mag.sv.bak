@@ -1,0 +1,18 @@
+
+
+module fft_mag
+#(  parameter DIN_WIDTH = 25)  // Set to 25 to match Quartus Natural Word Growth
+(   
+    input  logic               clk50,      // Main system clock
+    input  logic               rst_n,      // Global reset
+    
+    // --- Inputs from Analogue Front End ---
+    input logic               				valid_in,   
+    input logic signed [DIN_WIDTH-1:0] 	fft_real_in,
+	 input logic signed 	[DIN_WIDTH-1:0]	fft_imag_out,
+	 input logic 									fft_valid_in,
+    
+    // --- Outputs to Feature Extraction ---
+    output logic               fft_valid_out,
+    output logic               fft_mag_out
+);

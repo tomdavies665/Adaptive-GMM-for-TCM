@@ -1,0 +1,76 @@
+
+
+
+module fft_wrapper
+#(	parameter DIN_WIDTH = 17,
+	parameter FFT_DEPTH = 2048,
+	parameter FFT_WIDTH = 18)  
+(	input  logic               clk50,      // Main system clock
+   input  logic               rst_n,      // Global reset
+    
+   // --- Inputs from Analogue Front End ---
+   input  logic               valid_in,   // From AFE sample_vld
+   input  logic signed [DIN_WIDTH-1:0] data_in,    // From AFE sample_out (Q3.14)
+    
+   // --- Outputs to Feature Extraction ---
+   output logic               fft_valid_out,
+   output logic               fft_sop_out,
+   output logic               fft_eop_out,
+   output logic signed [FFT_WIDTH-1:0] fft_real_out,
+   output logic signed [FFT_WIDTH-1:0] fft_imag_out
+);
+    
+    // Internal Registers
+    logic [10:0] sample_count; 
+    logic        sink_ready;
+    logic        sink_sop;
+    logic        sink_eop;
+
+    // --- Packetizing Logic (Counter) ---
+    always_ff @(posedge clk50 or negedge rst_n) begin
+        if (!rst_n) begin
+            sample_count <= 11'd0;
+        end else if (valid_in && sink_ready) begin
+            if (sample_count == FFT_DEPTH - 1)
+                sample_count <= 11'd0;
+            else
+                sample_count <= sample_count + 11'd1;
+        end
+    end
+
+    // Flag the First and Last samples of the 2048 block
+    assign sink_sop = (sample_count == 11'd0) && valid_in;
+    assign sink_eop = (sample_count == (FFT_DEPTH - 1)) && valid_in;
+
+    // Sign-extend the 17-bit Q3.14 data to 18-bit for the FFT IP
+    logic signed [FFT_WIDTH-1:0] padded_data_in;
+    assign padded_data_in = {data_in[16], data_in}; 
+
+    // --- FFT Instantiation ---
+    fft fft_1 (
+        .clk          (clk50),          
+        .reset_n      (rst_n),      
+        
+        // Sink (Input from AFE)
+        .sink_valid   (valid_in),   
+        .sink_ready   (sink_ready), 
+        .sink_error   (2'b00),          // Tie to 0, no error checking needed here
+        .sink_sop     (sink_sop),   
+        .sink_eop     (sink_eop),   
+        .sink_real    (padded_data_in), 
+        .sink_imag    (18'd0),          // 0 for purely real input
+        .inverse      (1'b0),           // 0 for forward FFT (Time -> Freq)
+        
+        // Source (Output downstream)
+        .source_valid (fft_valid_out), 
+        .source_ready (1'b1),           // Tie to 1 assuming downstream is always ready
+        .source_error (),           
+        .source_sop   (fft_sop_out),   
+        .source_eop   (fft_eop_out),   
+        .source_real  (fft_real_out),  
+        .source_imag  (fft_imag_out)  
+    );
+
+endmodule
+	
+	

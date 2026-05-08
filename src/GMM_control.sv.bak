@@ -1,0 +1,36 @@
+// GMM - Training & Inference
+// This controls the GMM for training and inference
+// 
+// TRAINING
+// Accpets number of training samples (NUM_SAMPLES) as a single word containing 3 features
+// Instantiates GMM_Mean to get mean of all 3 features
+// Writes to memory while simultaneously compute mean of features
+// Instantiates Covariance Matrix
+// Computes the covariance Matrix
+//
+// INFERENCE
+// Instantiates manalanobis distance
+
+module gmm
+#(
+	PARAMETER NUM_SAMPLES = 64,
+	PARAMETER DIN_WIDTH = 50,
+	PARAMETER DIN_WIDTH = 16,
+)
+(
+	input logic 							clk50,
+	input logic 							rst_n,
+	
+	// Inputs
+	input logic								train_vld, // Training Control Flag
+	input logic 							infer_vld, // Inference Control Flag
+	input logic 							din_vld,
+	input logic [DIN_WIDTH-1:0]		din,
+	
+	// Outputs
+	output logic 							gmm_trained,
+	output logic							dout_vld,
+	output logic							worn_status, // Flag high for worn bit
+	output logic [DOUT_WIDTH-1:0]		mana_dist	 // Manalanobis Distance 
+);
+

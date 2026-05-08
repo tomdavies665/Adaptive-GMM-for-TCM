@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/FPGA_Projects/GMM/TestbenchScripts
+vfft_tb
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1774365937
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+!i10b 1
+!s100 DK9EbAJ]3Tk>j011ddhV23
+I=3iRY;S;H`VF=EV1mWU:A0
+S1
+R0
+w1774362923
+8C:/FPGA_Projects/GMM/Testbenches/fft_tb.sv
+FC:/FPGA_Projects/GMM/Testbenches/fft_tb.sv
+!i122 3
+L0 3 118
+Z4 OV;L;2020.1;71
+31
+Z5 !s108 1774365937.000000
+!s107 C:/FPGA_Projects/GMM/Testbenches/fft_tb.sv|
+!s90 -reportprogress|300|-sv|C:/FPGA_Projects/GMM/Testbenches/fft_tb.sv|
+!i113 1
+o-sv
+Z6 tCvgOpt 0
+vfft_wrapper
+R1
+R2
+R3
+r1
+!s85 0
+!i10b 1
+!s100 PXzCbP0Z@B>KZ234YI07m3
+Ie0^@YI;L9cYh@oe_TFZ6]1
+S1
+R0
+w1774362868
+8C:/FPGA_Projects/GMM/src/fft_wrapper.sv
+FC:/FPGA_Projects/GMM/src/fft_wrapper.sv
+!i122 2
+L0 4 67
+R4
+31
+R5
+!s107 C:/FPGA_Projects/GMM/src/fft_wrapper.sv|
+!s90 -reportprogress|300|-sv|C:/FPGA_Projects/GMM/src/fft_wrapper.sv|
+!i113 1
+o-sv
+R6

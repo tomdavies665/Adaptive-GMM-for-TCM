@@ -1,0 +1,65 @@
+Info: Starting: Create simulation model
+Info: qsys-generate C:\FPGA_Projects\GMM\ip\CORDIC_FFT.qsys --simulation=VERILOG --allow-mixed-language-simulation --output-directory=C:\FPGA_Projects\GMM\ip\CORDIC_FFT\simulation --family="MAX 10" --part=10M50DAF484C6GES
+Progress: Loading ip/CORDIC_FFT.qsys
+Progress: Reading input file
+Progress: Adding CORDIC_0 [altera_CORDIC 23.1]
+Progress: Parameterizing module CORDIC_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: CORDIC_FFT: Generating CORDIC_FFT "CORDIC_FFT" for SIM_VERILOG
+Info: CORDIC_0: C:/intelfpga_lite/23.1std/quartus/dspba/backend/windows64/cmdPolyEval -target MAX10 -frequency 50 -name CORDIC_FFT_CORDIC_0 -noChanValid -faithfulRounding -printMachineReadable -lang VHDL -speedgrade 6 FXPVecTranslate 26 0 1 24 0
+Info: CORDIC_0: Latency on MAX 10 is 6 cycles
+Info: CORDIC_0: DSP Blocks Used: 0
+Info: CORDIC_0: LUTs Used: 3639
+Info: CORDIC_0: Memory Bits Used: 0
+Info: CORDIC_0: Memory Blocks Used: 0
+Info: CORDIC_0: "CORDIC_FFT" instantiated altera_CORDIC "CORDIC_0"
+Info: CORDIC_FFT: Done "CORDIC_FFT" with 2 modules, 4 files
+Info: qsys-generate succeeded.
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd=C:\FPGA_Projects\GMM\ip\CORDIC_FFT\CORDIC_FFT.spd --output-directory=C:/FPGA_Projects/GMM/ip/CORDIC_FFT/simulation/ --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=C:\FPGA_Projects\GMM\ip\CORDIC_FFT\CORDIC_FFT.spd --output-directory=C:/FPGA_Projects/GMM/ip/CORDIC_FFT/simulation/ --use-relative-paths=true
+Info: Generating the following file(s) for MODELSIM simulator in C:/FPGA_Projects/GMM/ip/CORDIC_FFT/simulation/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Generating the following file(s) for RIVIERA simulator in C:/FPGA_Projects/GMM/ip/CORDIC_FFT/simulation/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under C:/FPGA_Projects/GMM/ip/CORDIC_FFT/simulation/.
+Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: Finished: Create Modelsim Project.
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\FPGA_Projects\GMM\ip\CORDIC_FFT.qsys --block-symbol-file --output-directory=C:\FPGA_Projects\GMM\ip\CORDIC_FFT --family="MAX 10" --part=10M50DAF484C6GES
+Progress: Loading ip/CORDIC_FFT.qsys
+Progress: Reading input file
+Progress: Adding CORDIC_0 [altera_CORDIC 23.1]
+Progress: Parameterizing module CORDIC_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\FPGA_Projects\GMM\ip\CORDIC_FFT.qsys --synthesis=VERILOG --output-directory=C:\FPGA_Projects\GMM\ip\CORDIC_FFT\synthesis --family="MAX 10" --part=10M50DAF484C6GES
+Progress: Loading ip/CORDIC_FFT.qsys
+Progress: Reading input file
+Progress: Adding CORDIC_0 [altera_CORDIC 23.1]
+Progress: Parameterizing module CORDIC_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: CORDIC_FFT: Generating CORDIC_FFT "CORDIC_FFT" for QUARTUS_SYNTH
+Info: CORDIC_0: C:/intelfpga_lite/23.1std/quartus/dspba/backend/windows64/cmdPolyEval -target MAX10 -frequency 50 -name CORDIC_FFT_CORDIC_0 -noChanValid -faithfulRounding -printMachineReadable -lang VHDL -speedgrade 6 FXPVecTranslate 26 0 1 24 0
+Info: CORDIC_0: Latency on MAX 10 is 6 cycles
+Info: CORDIC_0: DSP Blocks Used: 0
+Info: CORDIC_0: LUTs Used: 3639
+Info: CORDIC_0: Memory Bits Used: 0
+Info: CORDIC_0: Memory Blocks Used: 0
+Info: CORDIC_0: "CORDIC_FFT" instantiated altera_CORDIC "CORDIC_0"
+Info: CORDIC_FFT: Done "CORDIC_FFT" with 2 modules, 4 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Tue May  5 11:41:54 2026
+Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Revision Name : GaussianMixtureModel
+Top-level Entity Name : GaussianMixtureModel
+Family : MAX 10
+Total logic elements : 21,134
+    Total combinational functions : 18,669
+    Dedicated logic registers : 11,515
+Total registers : 11515
+Total pins : 9
+Total virtual pins : 0
+Total memory bits : 116,836
+Embedded Multiplier 9-bit elements : 206
+Total PLLs : 1
+UFM blocks : 0
+ADC blocks : 1

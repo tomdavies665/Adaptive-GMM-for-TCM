@@ -1,0 +1,42 @@
+// This Model is to scale the 13 bit signed differential signal between 0 and 3.3V
+// It multiplies by a stored 3.3V/4095 with a slight truncation error
+//
+
+module adcScale  (
+    input  logic        clk50,     	 // Main system clock
+    input  logic        rst_n,     	 // Global reset
+    input  logic [12:0] data_in, 	 // Differential value
+    output logic [17:0] data_out, 	// 17-bit out put to account for overflow
+    output logic        sample_vld  // Strobe: High for 1 clock when data is ready for GMM
+);
+
+	// Scale constant: (3.3 / 4095) * 2^24 = ~13520
+	// Using a 16-bit signed constant to fit the value cleanly
+	localparam signed [15:0] SCALER = 16'sd13520; 
+	
+	// Internal register to hold the 29-bit multiplication product
+    // 13 bits (data_in) + 16 bits (SCALER) = 29 bits max
+    logic signed [28:0] mult_product;
+
+    always_ff @(posedge clk50 or negedge rst_n) begin
+        if (!rst_n) begin
+            mult_product <= '0;
+            data_out     <= '0;
+            sample_vld   <= 1'b0;
+        end else begin
+            // 1. Delay the valid signal by 1 clock cycle to align with the math
+            sample_vld <= valid_in;
+
+            // 2. Perform the multiplication when new data arrives
+            if (valid_in) begin
+                mult_product <= data_in * SCALER;
+            end
+            
+            // 3. Format to Q3.14 by shifting right by 10
+            // We slice bits [27:10] to drop the bottom 10 fractional bits 
+            // and grab exactly 18 bits for the output.
+            data_out <= mult_product[27:10]; 
+        end
+    end
+
+endmodule

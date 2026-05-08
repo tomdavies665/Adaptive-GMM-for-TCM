@@ -1,0 +1,212 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/FPGA_Projects/GMM/ip/cordic/simulation/mentor
+vadc
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1774534922
+!i10b 1
+!s100 7H14c28DHGEM5M2KPH4C_0
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IV3m:NTRB8291n67EdHmYF0
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+Z5 w1773075474
+Z6 8C:/FPGA_Projects/GMM/Testbenches/dummies.sv
+Z7 FC:/FPGA_Projects/GMM/Testbenches/dummies.sv
+!i122 10
+L0 13 23
+Z8 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z9 !s108 1774534922.000000
+Z10 !s107 C:/FPGA_Projects/GMM/Testbenches/dummies.sv|
+Z11 !s90 -reportprogress|300|-sv|C:/FPGA_Projects/GMM/Testbenches/dummies.sv|
+!i113 1
+o-sv
+Z12 tCvgOpt 0
+vanalogue_front_end
+R1
+R2
+!i10b 1
+!s100 dC]GcbAXUNfhLO36B`ieA1
+R3
+Ifhk6662OP:Zo`[dXGF^>11
+R4
+S1
+R0
+w1774532828
+8C:/FPGA_Projects/GMM/src/AnalogueFrontEnd.sv
+FC:/FPGA_Projects/GMM/src/AnalogueFrontEnd.sv
+!i122 8
+L0 12 198
+R8
+r1
+!s85 0
+31
+R9
+!s107 C:/FPGA_Projects/GMM/src/AnalogueFrontEnd.sv|
+!s90 -reportprogress|300|-sv|C:/FPGA_Projects/GMM/src/AnalogueFrontEnd.sv|
+!i113 1
+o-sv
+R12
+vanalogueFrontEnd_tb
+R1
+R2
+!i10b 1
+!s100 ``ZzP91S@METMc3@jG1AZ0
+R3
+IOQDl2MTP9h`S[YAn`22Im0
+R4
+S1
+R0
+w1774532902
+8C:/FPGA_Projects/GMM/Testbenches/analogueFrontEnd_tb.sv
+FC:/FPGA_Projects/GMM/Testbenches/analogueFrontEnd_tb.sv
+!i122 9
+L0 3 170
+R8
+r1
+!s85 0
+31
+R9
+!s107 C:/FPGA_Projects/GMM/Testbenches/analogueFrontEnd_tb.sv|
+!s90 -reportprogress|300|-sv|C:/FPGA_Projects/GMM/Testbenches/analogueFrontEnd_tb.sv|
+!i113 1
+o-sv
+R12
+nanalogue@front@end_tb
+vcordic
+Z13 !s110 1775560348
+!i10b 1
+!s100 F_`46^nXh8l?ZYGd3PA6L1
+R3
+ILmZb4Bfn`LHS8W`a>nAY<3
+R4
+R0
+w1774532630
+8./../cordic.v
+F./../cordic.v
+!i122 29
+L0 6 21
+R8
+r1
+!s85 0
+31
+Z14 !s108 1775560348.000000
+!s107 ./../cordic.v|
+!s90 -reportprogress|300|./../cordic.v|
+!i113 1
+R12
+vfreq_Feat_Ex
+R1
+R13
+!i10b 1
+!s100 T@dSVhU2bPlfG:7DmGFnC1
+R3
+I3j^LB65<;a1_?^fL^Z03N0
+R4
+S1
+R0
+w1775481049
+8C:/FPGA_Projects/GMM/src/FreqFeatEx.sv
+FC:/FPGA_Projects/GMM/src/FreqFeatEx.sv
+!i122 30
+L0 11 134
+R8
+r1
+!s85 0
+31
+R14
+!s107 C:/FPGA_Projects/GMM/src/FreqFeatEx.sv|
+!s90 -reportprogress|300|-sv|C:/FPGA_Projects/GMM/src/FreqFeatEx.sv|
+!i113 1
+o-sv
+R12
+nfreq_@feat_@ex
+vfreqFeat_tb
+R1
+R13
+!i10b 1
+!s100 kc]@oWP:ZL?CD07hA`BzV3
+R3
+IefPbhVWWeN7Hf9d6jl<TH1
+R4
+S1
+R0
+w1775560260
+Z15 8C:/FPGA_Projects/GMM/Testbenches/freqFeatue_tb.sv
+Z16 FC:/FPGA_Projects/GMM/Testbenches/freqFeatue_tb.sv
+!i122 31
+L0 3 127
+R8
+r1
+!s85 0
+31
+R14
+Z17 !s107 C:/FPGA_Projects/GMM/Testbenches/freqFeatue_tb.sv|
+Z18 !s90 -reportprogress|300|-sv|C:/FPGA_Projects/GMM/Testbenches/freqFeatue_tb.sv|
+!i113 1
+o-sv
+R12
+nfreq@feat_tb
+vfreqFeatue_tb
+R1
+!s110 1775557976
+!i10b 1
+!s100 ;aLYjTG^RP2D?0Y`K4H732
+R3
+I660>bkO]_n3GLN623nT3N3
+R4
+S1
+R0
+w1775557901
+R15
+R16
+!i122 13
+L0 3 138
+R8
+r1
+!s85 0
+31
+!s108 1775557976.000000
+R17
+R18
+!i113 1
+o-sv
+R12
+nfreq@featue_tb
+vpll
+R1
+R2
+!i10b 1
+!s100 ::1GJVVldhIE6F]5iMM0O0
+R3
+IRWD_P:NAa5AdLAzO:W5m10
+R4
+S1
+R0
+R5
+R6
+R7
+!i122 10
+L0 3 9
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+o-sv
+R12

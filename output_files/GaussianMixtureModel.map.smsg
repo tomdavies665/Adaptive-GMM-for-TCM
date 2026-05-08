@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at FreqFeatEx.sv(54): always construct contains both blocking and non-blocking assignments File: C:/FPGA_Projects/GMM - PCB/src/FreqFeatEx.sv Line: 54
+Warning (10273): Verilog HDL warning at altera_modular_adc_control_fsm.v(716): extended using "x" or "z" File: C:/FPGA_Projects/GMM - PCB/db/ip/adc/submodules/altera_modular_adc_control_fsm.v Line: 716

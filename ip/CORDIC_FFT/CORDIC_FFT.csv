@@ -1,0 +1,20 @@
+# system info CORDIC_FFT on 2026.03.26.15:39:34
+system_info:
+name,value
+DEVICE,10M50DAF484C6GES
+DEVICE_FAMILY,MAX 10
+GENERATION_ID,1774539570
+#
+#
+# Files generated for CORDIC_FFT on 2026.03.26.15:39:34
+files:
+filepath,kind,attributes,module,is_top
+simulation/CORDIC_FFT.v,VERILOG,,CORDIC_FFT,true
+simulation/submodules/dspba_library_package.vhd,VHDL,,CORDIC_FFT_CORDIC_0,false
+simulation/submodules/dspba_library.vhd,VHDL,,CORDIC_FFT_CORDIC_0,false
+simulation/submodules/CORDIC_FFT_CORDIC_0.vhd,VHDL,,CORDIC_FFT_CORDIC_0,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+CORDIC_FFT.CORDIC_0,CORDIC_FFT_CORDIC_0

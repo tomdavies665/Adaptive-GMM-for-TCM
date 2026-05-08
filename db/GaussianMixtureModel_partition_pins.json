@@ -1,0 +1,45 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "gmm_trained",
+					"strict" : false
+				},
+				{
+					"name" : "wear_leds[0]",
+					"strict" : false
+				},
+				{
+					"name" : "wear_leds[1]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_fft_sop",
+					"strict" : false
+				},
+				{
+					"name" : "debug_feat_vld",
+					"strict" : false
+				},
+				{
+					"name" : "debug_gmm_vld",
+					"strict" : false
+				},
+				{
+					"name" : "debug_gmm_trained",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst_n",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
