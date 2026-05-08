@@ -80,7 +80,6 @@ module freq_Feat_Ex
                         end
                         
                         // 2. Search for Fundamental Harmonic (Bins 1 to 10)
-                        // We skip Bin 0 just in case the DC offset wasn't perfectly removed
                         else if (bin_count >= 1 && bin_count <= 10) begin
                             if (fft_mag_in > max_mag) begin
                                 max_mag      <= fft_mag_in;
@@ -91,7 +90,6 @@ module freq_Feat_Ex
                         
                         // 3. Accumulate High Frequency Content
                         // Starts at the 20x threshold and STOPS at Nyquist (WINDOW_DEPTH/2 - 1)
-                        // We throw away the mirror image (Bins 512-1023)
                         else if (bin_count >= hf_start_bin && bin_count < (WINDOW_DEPTH / 2)) begin
                             hf_accum <= hf_accum + fft_mag_in;
                             hf_count <= hf_count + 1'b1;
