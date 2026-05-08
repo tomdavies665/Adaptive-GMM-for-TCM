@@ -62,7 +62,7 @@ module GMM_mean #(
                 acc_hf_mean   <= '0;
                 sample_cnt    <= '0;
             end 
-            // Otherwise, if we are training and a sample is valid, accumulate
+            // Otherwise accumulate
             else if (sample_vld) begin
                 
                 if (sample_cnt == 6'd63) begin
