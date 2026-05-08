@@ -64,7 +64,6 @@ module Matrix_Inversion
         .result ( result_sig )
     );
     
-    // FIX: Truncate to the BOTTOM 32 bits to preserve integer values.
     // Discarding the top 32 bits prevents massive accidental division.
     assign result_truncated = result_sig[31:0];
 
@@ -99,7 +98,6 @@ module Matrix_Inversion
                 end
 
                 LOAD: begin
-                    // FIX: Convert 36-bit to 32-bit by grabbing the bottom 32 bits directly.
                     // This preserves the true integer value of your covariance features.
                     a <= cov_in[0][31:0]; 
                     b <= cov_in[1][31:0]; 
@@ -169,10 +167,7 @@ module Matrix_Inversion
 
                 // Step 4: Division (Each cofactor / Determinant)
                 CALC_DIV: begin
-                    // FIX: Grab the bottom 32 bits of the determinant to prevent dividing by ~65k
                     denom_sig <= det[31:0]; 
-                    
-                    // FIX: Removed the <<< 12 shifts to keep the numerators as true integers
                     case (step)
                          0: numer_sig <= C00; 
                          1: numer_sig <= C01;
