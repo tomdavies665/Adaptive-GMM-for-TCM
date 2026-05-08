@@ -1,5 +1,4 @@
 // GMM - Training & Inference
-// Pure Math Engine
 
 module gmm
 #(
